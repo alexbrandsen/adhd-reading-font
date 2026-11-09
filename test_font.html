@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Font Test</title>
+    <style>
+        @font-face {
+            font-family: 'ADHDFont';
+            src: url('adhd-font.otf') format('opentype');
+        }
+        
+        body {
+            font-family: 'ADHDFont', sans-serif;
+            font-size: 24px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-family: sans-serif;
+            font-size: 36px;
+            color: #333;
+        }
+        
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        .word {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px 10px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        
+        .explanation {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+        
+        .note {
+            color: #666;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ADHD Font Test</h1>
+    
+    <div class="explanation">
+        <strong>How it works:</strong> This page tests the ADHD Reading Font, which should automatically bold 
+        the first 40-50% of each word. If the font is working correctly, you should see the first portion 
+        of each word below appear in bold.
+    </div>
+    
+    <div class="test-section">
+        <h2>Short Words (1-3 letters)</h2>
+        <div>
+            <span class="word">I</span>
+            <span class="word">a</span>
+            <span class="word">it</span>
+            <span class="word">is</span>
+            <span class="word">the</span>
+            <span class="word">and</span>
+            <span class="word">for</span>
+        </div>
+        <p class="note">Expected: Only the first letter of each word should be bold (except 1-letter words)</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Medium Words (4-6 letters)</h2>
+        <div>
+            <span class="word">Bold</span>
+            <span class="word">font</span>
+            <span class="word">Reading</span>
+            <span class="word">essential</span>
+            <span class="word">skill</span>
+        </div>
+        <p class="note">Expected: First 2-3 letters should be bold</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Long Words (7+ letters)</h2>
+        <div>
+            <span class="word">understanding</span>
+            <span class="word">challenging</span>
+            <span class="word">comprehension</span>
+            <span class="word">knowledge</span>
+        </div>
+        <p class="note">Expected: First 40-50% of letters should be bold</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Full Sentence</h2>
+        <p>
+            Reading is an essential skill for everyone. The ability to read well opens doors to knowledge and understanding. People with ADHD often find it challenging to maintain focus while reading long texts.
+        </p>
+    </div>
+    
+    <div class="explanation">
+        <strong>Troubleshooting:</strong>
+        <ul>
+            <li>If all characters are bold: The font features are not working correctly</li>
+            <li>If no characters are bold: The calt feature might be disabled</li>
+            <li>If it works: Congratulations! The font is working correctly</li>
+        </ul>
+    </div>
+    
+    <div class="note">
+        <p><strong>Note:</strong> This test requires that:</p>
+        <ol>
+            <li>The adhd-font.otf file is in the same directory as this HTML file</li>
+            <li>Your browser supports OpenType features (all modern browsers do)</li>
+            <li>The font loads successfully (check browser console for errors)</li>
+        </ol>
+    </div>
+</body>
+</html>
