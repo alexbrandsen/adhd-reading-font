@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Reading Font Demo</title>
+    <style>
+        @font-face {
+            font-family: 'Aileron';
+            src: url('aileron/Aileron-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'Aileron';
+            src: url('aileron/Aileron-Bold.otf') format('opentype');
+            font-weight: bold;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: 'Aileron', sans-serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            color: #333;
+        }
+        
+        h1 {
+            font-family: 'Aileron', sans-serif;
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-family: 'Aileron', sans-serif;
+            font-weight: bold;
+            color: #3498db;
+            margin-top: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .ratio-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .ratio-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .text-sample {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .explanation {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        .word-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .word-example {
+            background-color: white;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .word-original {
+            font-weight: normal;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .word-formatted {
+            font-size: 18px;
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ADHD Reading Font Demo</h1>
+    
+    <div class="explanation">
+        <strong>About:</strong> This page demonstrates the ADHD Reading Font tool, which applies bold formatting 
+        to the first 40-50% of each word to improve readability for people with ADHD. The text below shows the same 
+        content formatted with different fixation ratios (40%, 45%, and 50%).
+    </div>
+    
+    <h2>Sample Text Comparison</h2>
+    
+    <div class="ratio-section">
+        <span class="ratio-label">Fixation Ratio: 40% (ceil(word_length × 0.4))</span>
+        <div class="text-sample">
+            <b>Rea</b>ding <b>i</b>s <b>a</b>n <b>esse</b>ntial <b>sk</b>ill <b>f</b>or <b>ever</b>yone. <b>T</b>he <b>abi</b>lity <b>t</b>o <b>re</b>ad <b>we</b>ll 
+            <b>op</b>ens <b>do</b>ors <b>t</b>o <b>know</b>ledge <b>a</b>nd <b>unders</b>tanding. <b>Peo</b>ple <b>wi</b>th <b>AD</b>HD <b>of</b>ten 
+            <b>fi</b>nd <b>i</b>t <b>chall</b>enging <b>t</b>o <b>main</b>tain <b>fo</b>cus <b>wh</b>ile <b>rea</b>ding <b>lo</b>ng <b>te</b>xts.
+        </div>
+    </div>
+    
+    <div class="ratio-section">
+        <span class="ratio-label">Fixation Ratio: 45% (ceil(word_length × 0.45))</span>
+        <div class="text-sample">
+            <b>Read</b>ing <b>i</b>s <b>a</b>n <b>essen</b>tial <b>ski</b>ll <b>f</b>or <b>ever</b>yone. <b>T</b>he <b>abil</b>ity <b>t</b>o <b>re</b>ad <b>we</b>ll 
+            <b>ope</b>ns <b>doo</b>rs <b>t</b>o <b>knowl</b>edge <b>a</b>nd <b>unders</b>tanding. <b>Peo</b>ple <b>wi</b>th <b>AD</b>HD <b>oft</b>en 
+            <b>fi</b>nd <b>i</b>t <b>chall</b>enging <b>t</b>o <b>main</b>tain <b>foc</b>us <b>whi</b>le <b>read</b>ing <b>lo</b>ng <b>tex</b>ts.
+        </div>
+    </div>
+    
+    <div class="ratio-section">
+        <span class="ratio-label">Fixation Ratio: 50% (ceil(word_length × 0.5))</span>
+        <div class="text-sample">
+            <b>Read</b>ing <b>i</b>s <b>an</b> <b>essen</b>tial <b>skil</b>l <b>for</b> <b>every</b>one. <b>T</b>he <b>abil</b>ity <b>t</b>o <b>re</b>ad <b>we</b>ll 
+            <b>ope</b>ns <b>door</b>s <b>t</b>o <b>knowl</b>edge <b>a</b>nd <b>underst</b>anding. <b>Peop</b>le <b>wi</b>th <b>ADHD</b> <b>often</b> 
+            <b>fi</b>nd <b>i</b>t <b>challe</b>nging <b>t</b>o <b>mainta</b>in <b>focu</b>s <b>while</b> <b>readi</b>ng <b>long</b> <b>text</b>s.
+        </div>
+    </div>
+    
+    <h2>Word-by-Word Examples</h2>
+    <p>Here are some individual word examples showing how the bolding works at 50% ratio:</p>
+    
+    <div class="word-examples">
+        <div class="word-example">
+            <div class="word-original">Reading (7 letters)</div>
+            <div class="word-formatted"><b>Read</b>ing</div>
+            <small>ceil(7 × 0.5) = ceil(3.5) = 4</small>
+        </div>
+        <div class="word-example">
+            <div class="word-original">Bold (4 letters)</div>
+            <div class="word-formatted"><b>Bo</b>ld</div>
+            <small>ceil(4 × 0.5) = ceil(2) = 2</small>
+        </div>
+        <div class="word-example">
+            <div class="word-original">the (3 letters)</div>
+            <div class="word-formatted"><b>t</b>he</div>
+            <small>2-3 letter rule: 1 letter</small>
+        </div>
+        <div class="word-example">
+            <div class="word-original">it (2 letters)</div>
+            <div class="word-formatted"><b>i</b>t</div>
+            <small>2-3 letter rule: 1 letter</small>
+        </div>
+        <div class="word-example">
+            <div class="word-original">a (1 letter)</div>
+            <div class="word-formatted">a</div>
+            <small>1-letter rule: unbolded</small>
+        </div>
+        <div class="word-example">
+            <div class="word-original">understanding (13 letters)</div>
+            <div class="word-formatted"><b>understand</b>ing</div>
+            <small>ceil(13 × 0.5) = ceil(6.5) = 7</small>
+        </div>
+    </div>
+    
+    <h2>How to Use</h2>
+    <div class="explanation">
+        <p><strong>1. Install the tool:</strong> Run <code>pip install -r requirements.txt</code></p>
+        <p><strong>2. Process text:</strong> <code>python adhd_font_tool.py --text "Your text" --ratio 0.45</code></p>
+        <p><strong>3. Process a file:</strong> <code>python adhd_font_tool.py --file input.txt --output output.html</code></p>
+        <p><strong>4. Use with CSS:</strong> Use the Aileron font family with bold weight for the &lt;b&gt; tags.</p>
+    </div>
+    
+    <footer>
+        <p>ADHD Reading Font Tool | Using Aileron Font Family | <a href="https://github.com/alexbrandsen/adhd-reading-font">GitHub</a></p>
+    </footer>
+</body>
+</html>

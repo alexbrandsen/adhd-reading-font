@@ -1,0 +1,7 @@
+# ADHD Reading Font Tool - Requirements
+# Minimal dependencies for the text processing tool
+
+# No external dependencies needed for basic functionality
+# fonttools is optional for advanced font manipulation
+
+fonttools>=4.0.0
